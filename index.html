@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centros de Ciencia y Observación Astronómica en Bolivia</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    
+    <!-- Nuestro CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Agrega esto en el head -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+
+    <!-- Agrega estas librerías adicionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.css" />
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>🌌 Centros de Ciencia y Observación Astronómica en Bolivia 🗺️</h1>
+            <div class="controls">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Buscar por nombre o ciudad...">
+                    <button id="search-btn">Buscar</button>
+                </div>
+                <div class="filter-box">
+                    <select id="filter-type">
+                        <option value="all">Todos los tipos</option>
+                        <option value="observatorio">Observatorio</option>
+                        <option value="planetario">Planetario</option>
+                        <option value="museo">Museo Científico</option>
+                        <option value="universidad">Universidad</option>
+                        <option value="club">Club de Astronomía</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div id="map"></div>
+            
+            <div class="info-panel">
+                <div class="panel-header">
+                    <h3>Información del lugar</h3>
+                    <button id="close-panel" class="close-btn">×</button>
+                </div>
+                <div id="place-info" class="panel-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="leaflet/leaflet.js"></script>
+
+    <!-- Agrega esto antes de tu script.js -->
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.js"></script>
+
+    <!-- Nuestros scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
